@@ -1,0 +1,13 @@
+{
+  "name": "circuit",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev:website": "yarn workspace @circuit/website run dev",
+    "build:website": "yarn workspace @circuit/website run build"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "packageManager": "yarn@4.0.1"
+}

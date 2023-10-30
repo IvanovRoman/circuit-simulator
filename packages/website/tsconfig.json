@@ -1,0 +1,8 @@
+{
+  "extends": "@circuit/tsconfig",
+  "include": ["src", "typings", "tests"],
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "baseUrl": "."
+  }
+}

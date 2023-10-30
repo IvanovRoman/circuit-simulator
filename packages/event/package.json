@@ -1,0 +1,34 @@
+{
+  "name": "@circuit/event",
+  "description": "circuit's event controller",
+  "version": "1.0.0",
+  "source": "src/index.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "clear": "rimraf ./dist",
+    "build:cjs": "tsc -p ./tsconfig.build.json --outDir dist/cjs --module CommonJs",
+    "build:esm": "tsc -p ./tsconfig.build.json --outDir dist/esm --module ESNext",
+    "build": "run clear && run build:cjs && run build:esm",
+    "lint": "eslint --quiet --no-error-on-unmatched-pattern --config ../../.eslintrc.js src/**/*.{ts,tsx,js,jsx}",
+    "lint:fix": "eslint --fix --quiet --no-error-on-unmatched-pattern --config ../../.eslintrc.js src/**/*.{ts,tsx,js,jsx}"
+  },
+  "dependencies": {
+    "@circuit/math": "workspace:*",
+    "@xiao-ai/utils": "1.6.6",
+    "react": "18.2.0"
+  },
+  "devDependencies": {
+    "@circuit/tsconfig": "workspace:*",
+    "@types/circuit": "workspace:*",
+    "@types/react": "18.2.33",
+    "eslint": "8.52.0",
+    "rimraf": "5.0.5"
+  }
+}
